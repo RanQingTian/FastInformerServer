@@ -2,3 +2,10 @@
  * 
  */
 package BasicObjects;
+
+/*需要在数据库中建表的类
+ *Acceptor
+ *Informer
+ *Message
+ *MessageRecord 
+ */
