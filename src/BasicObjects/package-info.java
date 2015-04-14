@@ -3,7 +3,7 @@
  */
 package BasicObjects;
 
-/*需要在数据库中建表的类
+/*需要在MySQL中建表的类
  *Acceptor
  *Informer
  *Message
