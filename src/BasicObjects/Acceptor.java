@@ -1,6 +1,6 @@
 package BasicObjects;
 
-import java.util.ArrayList;
+import java.util.Set;;
 
 public class Acceptor {
 	private final String id;
@@ -13,12 +13,15 @@ public class Acceptor {
 	public String hostel;
 	public String hostel_room;
 	public String telephone;
-//	private ArrayList<> message_list;
-//	private ArrayList<> informer_list;
+	private Set<Message> message_set;
+	private Set<Informer> informer_set;
 	
-	public Acceptor(String id,String name,String sex) {
+	public Acceptor(String id,String name) {
 		this.id = id;
 		this.name = name;
-		this. sex = sex;
 	}
+	public void setSex(String sex){
+		this.sex= sex;
+	}
+	
 }

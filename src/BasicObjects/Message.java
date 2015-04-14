@@ -15,15 +15,40 @@ public class Message {
 	public Set<String> acceptor_set;
 	final private Date create_date;
 	public Date send_date ;
-	private MessageRecord record;
+	private Set<MessageRecord> record;
+	private String send_status="Not Send";
 	
 	
-	public Message(Set<String> acceptor_set){
+	public Message(){
 		id =message_counter.toString();
 		message_counter++;
 		create_date=new Date();
-		this.acceptor_set=new HashSet<String>(acceptor_set);
-		record=new MessageRecord(id,this.acceptor_set);
+	}
+	
+//	public boolean sendMessage(String importance_degree,String title,String content,String type,
+//			Set<String> acceptor_set){
+//		this.importance_degree= importance_degree;
+//		this.title= title;
+//		this.content= content;
+//		this.type =type;
+//		this.acceptor_set=new HashSet<String>(acceptor_set);
+//		this.record= new HashSet<MessageRecord>();
+//		for(String str:acceptor_set)
+//			record.add(new MessageRecord(id,str));
+//		send_date= new Date();
+//		//method() 调用一个方法将消息发送给Acceptor,如果发送成功则返回true
+//		return false;
+//		
+//	}
+	
+	public void setStatus(String status){
+		send_status=status;
+	}
+	
+	public boolean copyTo(Message image) throws CloneNotSupportedException{
+		if(image.id!=this.id) return false;
+		image=(Message) this.clone();//需重写clone方法
+		return true;
 	}
 	
 	
