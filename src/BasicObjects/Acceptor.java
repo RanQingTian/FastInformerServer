@@ -1,6 +1,7 @@
 package BasicObjects;
 
-import java.util.Set;;
+import java.util.Set;
+import java.lang.String;
 
 public class Acceptor {
 	private final String id;
